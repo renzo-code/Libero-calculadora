@@ -30,6 +30,8 @@ const TableCalcPositions = ({ table, setTable }) => {
                   PG={item.PG}
                   PE={item.PE}
                   PP={item.PP}
+                  GF={item.GF}
+                  GC={item.GC}
                   DG={item.DG}
                   PTS={item.PTS}
                 />
@@ -48,6 +50,8 @@ const TableCalcPositions = ({ table, setTable }) => {
                   PG={item.PG}
                   PE={item.PE}
                   PP={item.PP}
+                  GF={item.GF}
+                  GC={item.GC}
                   DG={item.DG}
                   PTS={item.PTS}
                 />
@@ -66,6 +70,8 @@ const TableCalcPositions = ({ table, setTable }) => {
                   PG={item.PG}
                   PE={item.PE}
                   PP={item.PP}
+                  GF={item.GF}
+                  GC={item.GC}
                   DG={item.DG}
                   PTS={item.PTS}
                 />
@@ -77,21 +83,23 @@ const TableCalcPositions = ({ table, setTable }) => {
 
   return (
     <>
-      <ContentScroll>
+      <div className='contentScroll'>
         <ContainerTable>
           <WrapperHead>
             <NumberPosition>
               #
             </NumberPosition>
             <BlockPaises>
-              Selección
+              POSICIONES DE EQUIPOS
             </BlockPaises>
             <EstadisticsHead>PJ</EstadisticsHead>
             <EstadisticsHead>PG</EstadisticsHead>
             <EstadisticsHead>PE</EstadisticsHead>
             <EstadisticsHead>PP</EstadisticsHead>
-            <EstadisticsHead>DG</EstadisticsHead>
+            <EstadisticsHead>GF</EstadisticsHead>
+            <EstadisticsHead>GC</EstadisticsHead>
             <EstadisticsHead>PTS</EstadisticsHead>
+            <EstadisticsHead>DG</EstadisticsHead>
           </WrapperHead>
 
           <WrapperBody>
@@ -115,9 +123,24 @@ const TableCalcPositions = ({ table, setTable }) => {
             </WrapperBarPoints>
           </WrapperBody>
         </ContainerTable>
-      </ContentScroll>
+      </div>
       <style jsx={true}>{`
-
+        .contentScroll {
+          height: auto;
+          width: 750px;
+          max-width: 100%;
+          margin: 10px auto;
+          overflow-x: scroll;
+          overflow-y: hidden;
+        }
+        .contentScroll::-webkit-scrollbar {
+          height: 7px;
+          background: #EEEEEE;
+        }
+        .contentScroll::-webkit-scrollbar-thumb {
+          background: #3466D6;
+          border-radius: 2px;
+        }
       `}</style>
     </>
   )
@@ -126,7 +149,7 @@ const TableCalcPositions = ({ table, setTable }) => {
 export default TableCalcPositions
 const ContentScroll = styled.div`
   height: auto;
-  width: 650px;
+  width: 750px;
   max-width: 100%;
   margin: 10px auto;
   overflow-x: scroll;
@@ -134,7 +157,7 @@ const ContentScroll = styled.div`
 `
 const ContainerTable = styled.div`
   height: auto;
-  width: 560px;
+  width: 660px;
   margin: 10px auto;
   background-color: white;
 `
@@ -142,6 +165,8 @@ const WrapperHead = styled.div`
   display: flex;
   width: 100%;
   height: 50px;
+  background-color: #F2F2F2;
+  border-bottom: solid 2px #E4E4E4;
 `
 const NumberPosition = styled.div`
   width: 50px;
@@ -180,7 +205,7 @@ const PositionC = styled.div`
   text-align: center;
   font-weight: bold;
   background-color: #D2EB93;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #EEEEEE;
   @media (max-width: 470px){
     height: 51px;
     line-height: 50px;
@@ -193,7 +218,7 @@ const PositionR = styled.div`
   text-align: center;
   font-weight: bold;
   background-color: #C2C2C2;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #EEEEEE;
   @media (max-width: 470px){
     height: 51px;
     line-height: 50px;
@@ -205,6 +230,7 @@ const Position = styled.div`
   line-height: 60px;
   text-align: center;
   font-weight: bold;
+  border-bottom: 1px solid #EEEEEE;
   @media (max-width: 470px){
     height: 51px;
     line-height: 50px;
@@ -215,9 +241,9 @@ const WrapperBarPoints = styled.div`
   height: auto;
   `
 const BarPoints = styled.div`
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #EEEEEE;
   display: flex;
-  width: 510px;
+  width: auto;
   height: 60px;
   @media (max-width: 470px){
     height: auto;

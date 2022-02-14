@@ -2,7 +2,7 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-const LineEstadistics = ({ ImagePais, NamePais, PJ, PG, PE, PP, DG, PTS, colorLine }) => {
+const LineEstadistics = ({ ImagePais, NamePais, PJ, PG, PE, PP, GF, GC, DG, PTS, colorLine }) => {
   return (
     <>
       <WrapperImgtitle colorLine={colorLine}>
@@ -16,8 +16,10 @@ const LineEstadistics = ({ ImagePais, NamePais, PJ, PG, PE, PP, DG, PTS, colorLi
           <Estadistics>{PG}</Estadistics>
           <Estadistics>{PE}</Estadistics>
           <Estadistics>{PP}</Estadistics>
-          <Estadistics>{DG}</Estadistics>
+          <Estadistics>{GF}</Estadistics>
+          <Estadistics>{GC}</Estadistics>
           <Estadistics>{PTS}</Estadistics>
+          <Estadistics>{DG}</Estadistics>
         </WrapperEstadistics>
       </WrapperImgtitle>
     </>
@@ -46,8 +48,9 @@ const ContentImage = styled.div`
   }
 `
 const ImgPais = styled.img`
-  height: 90%;
+  height: 80%;
   object-fit: cover;
+  border-radius: 50px;
 `
 const ContentTitlePais = styled.div`
   padding-left: 15px;
@@ -71,9 +74,11 @@ const Estadistics = styled.div`
   width: 50px;
   height: 60px;
   /* border-bottom: 1px solid white; */
+  font-size: 15px;
   line-height: 60px;
   text-align: center;
   font-weight: bold;
+  letter-spacing: -1px;
   @media (max-width: 470px){
     height: 50px;
     line-height: 50px;

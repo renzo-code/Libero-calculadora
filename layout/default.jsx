@@ -65,6 +65,7 @@ const LayoutContent = styled.div`
   width: 100%;
   height: 100%;
   overflow-y: hidden;
+  overflow-x: hidden;
 `
 const LayoutBody = styled.div`
   width: 100%;
