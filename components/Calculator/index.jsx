@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import MeasurerCalc from '../Measurer-calc'
 import TableCalcPositions from '../Table-calc/table'
+import MesurerCalcLine from '../MesurerCalcLine'
 import { ArrayPointsTable } from '../../const/index'
 
 const Calculator = () => {
@@ -14,6 +15,7 @@ const Calculator = () => {
         Usa nuestra calculadora, pronostica resultados y mira si tu selección alcanzará un cupo para el Mundial que se disputará en Qatar el 2022.
       </Bajada>
       <MeasurerCalc table={table} setTable={setTable} />
+      <MesurerCalcLine/>
       <TableCalcPositions table={table} setTable={setTable} />
       <Bajada>Descarga tu predicción Eliminatorias Sudamérica Qatar 2022</Bajada>
       <BtnDowload>Descargar</BtnDowload>

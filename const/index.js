@@ -332,7 +332,7 @@ export const ArrayPointsTable = [
     PG: 6, 
     PE: 4,
     PP: 6,
-    DG: "- 3",
+    DG: -3,
     PTS: 22,
     GF: 19,
     GC: 22
@@ -447,4 +447,102 @@ export const ArrayScorers = [
     player: 'Michael Estrada',
     goals: '6'
   }
+]
+
+const FutureVs = [
+  [
+    {
+      id: 1,
+      logo1: './static/images/100_uruguay.svg',
+      score1: '',
+      logo2: './static/images/100_peru.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 2,
+      logo1: './static/images/100_colombia.svg',
+      score1: '',
+      logo2: './static/images/100_bolivia.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 3,
+      logo1: './static/images/100_brasil.svg',
+      score1: '',
+      logo2: './static/images/100_chile.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 4,
+      logo1: './static/images/100_paraguay.svg',
+      score1: '',
+      logo2: './static/images/100_ecuador.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 5,
+      logo1: './static/images/100_argentina.svg',
+      score1: '',
+      logo2: './static/images/100_venezuela.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    }
+  ],
+
+  [
+    {
+      id: 1,
+      logo1: './static/images/100_peru.svg',
+      score1: '',
+      logo2: './static/images/100_paraguay.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 2,
+      logo1: './static/images/100_venezuela.svg',
+      score1: '',
+      logo2: './static/images/100_colombia.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 3,
+      logo1: './static/images/100_bolivia.svg',
+      score1: '',
+      logo2: './static/images/100_brasil.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 4,
+      logo1: './static/images/100_chile.svg',
+      score1: '',
+      logo2: './static/images/100_uruguay.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    },
+    {
+      id: 5,
+      logo1: './static/images/100_ecuador.svg',
+      score1: '',
+      logo2: './static/images/100_argentina.svg',
+      score2: '',
+      date: '',
+      stadium: ''
+    }
+  ]
 ]

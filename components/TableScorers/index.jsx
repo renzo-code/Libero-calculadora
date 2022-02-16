@@ -7,48 +7,46 @@ import { ArrayScorers } from '../../const'
 const TableScorers = () => {
   return (
     <>
-      {/* <Container> */}
-        <div className='ContentScroll'>
-          <ContainerTable>
-            <WrapperHead>
-              <NumberPosition>#</NumberPosition>
-              <BlockPaises>GOLEADORES</BlockPaises>
-              <EstadisticsHead>GOLES</EstadisticsHead>
-            </WrapperHead>
+      <div className='ContentScroll'>
+        <ContainerTable>
+          <WrapperHead>
+            <NumberPosition>#</NumberPosition>
+            <BlockPaises>GOLEADORES</BlockPaises>
+            <EstadisticsHead>GOLES</EstadisticsHead>
+          </WrapperHead>
 
-            <WrapperBody>
-              <WrapperPositions>
-                <Position>1</Position>
-                <Position>2</Position>
-                <Position>3</Position>
-                <Position>4</Position>
-                <Position>5</Position>
-                <Position>6</Position>
-                <Position>7</Position>
-              </WrapperPositions>
+          <WrapperBody>
+            <WrapperPositions>
+              <Position>1</Position>
+              <Position>2</Position>
+              <Position>3</Position>
+              <Position>4</Position>
+              <Position>5</Position>
+              <Position>6</Position>
+              <Position>7</Position>
+            </WrapperPositions>
 
-              <WrapperBarPoints>
-                <BarPoints>
-                {
-                  ArrayScorers.map((item, i) => {
-                    return (
-                      <>
-                        <LineScorers
-                          key={i}
-                          logoPais={item?.logo}
-                          player={item?.player}
-                          goals={item?.goals}
-                        />
-                      </>
-                    )
-                  })
-                }
-                  </BarPoints>
-              </WrapperBarPoints>
-            </WrapperBody>
-          </ContainerTable>
-        </div>
-      {/* </Container> */}
+            <WrapperBarPoints>
+              <BarPoints>
+              {
+                ArrayScorers.map((item, i) => {
+                  return (
+                    <>
+                      <LineScorers
+                        key={i}
+                        logoPais={item?.logo}
+                        player={item?.player}
+                        goals={item?.goals}
+                      />
+                    </>
+                  )
+                })
+              }
+                </BarPoints>
+            </WrapperBarPoints>
+          </WrapperBody>
+        </ContainerTable>
+      </div>
       <style jsx={true}>{`
         .ContentScroll {
           display: flex;
@@ -74,20 +72,6 @@ const TableScorers = () => {
 
 export default TableScorers
 
-const Container = styled.div`
-  margin: 0 auto;
-  height: auto;
-  width: 360px;
-`
-
-const ContentScroll = styled.div`
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  margin: 10px auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-`
 const ContainerTable = styled.div`
   height: auto;
   width: auto;
