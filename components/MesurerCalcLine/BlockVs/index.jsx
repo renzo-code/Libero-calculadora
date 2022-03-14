@@ -1,23 +1,40 @@
 import React from 'react'
-
+import InputScore from '../../InputScore'
 import styled from 'styled-components'
 
-const BlockVs = () => {
+const BlockVs = ({ banderaPaisLeft, banderaPaisRight, scoreLeft, scoreRight, handleInput, idJornadaActual, idJornadaSelect }) => {
+  
   return (
     <ContainerVs>
       <WrapperCountries>
         <WrapperImage>
-          <ImageCountries src="./static/images/100_colombia.svg"/>
+          <ImageCountries src={banderaPaisLeft} />
         </WrapperImage>
         <WrapperImage>
-          <ImageCountries src="./static/images/100_peru.svg"/>
+          <ImageCountries src={banderaPaisRight} />
         </WrapperImage>
       </WrapperCountries>
 
       <BlockScore>
-        <Text>0</Text>
+        <InputScore
+          onInput={handleInput}
+          name="scoreLeft"
+          value={scoreLeft}
+          maxLength={2}
+          pattern="[0-9]*"
+          idJornadaSelect = {idJornadaSelect}
+          idJornadaActual = {idJornadaActual}
+        />
         <Text>-</Text>
-        <Text>0</Text>
+        <InputScore
+          onInput={handleInput}
+          name="scoreRight"
+          value={scoreRight}
+          maxLength={2}
+          pattern="[0-9]*"
+          idJornadaSelect = {idJornadaSelect}
+          idJornadaActual = {idJornadaActual}
+        />
       </BlockScore>
       <Date>Viernes 28 de Enero del 2022</Date>
       <Place>Metropolitano Roberto Meléndez</Place>
@@ -70,14 +87,13 @@ const Date = styled.div`
   width: 100%;
   max-height: 40px;
   height: 20px;
-  /* background-color: blue; */
   text-align: center;
   line-height: 20px;
   height: auto;
-  /* color: #CBCBCB; */
   letter-spacing: -0.3px;
   font-weight: 600;
   font-size: 15px;
+  margin-top: 10px;
   `
 const Place = styled.div`
   height: 23px;

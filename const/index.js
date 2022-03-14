@@ -1,3 +1,271 @@
+export const partidosPorFecha = [
+  {
+    id: 1,
+    jornada: 14,
+    partidos: [
+      {
+        idPartido: 1,
+        banderaPaisLeft: './static/images/100_colombia.svg',
+        nombrePaisLeft: 'Colombia',
+        scoreLeft: 0,
+        banderaPaisRight: './static/images/100_paraguay.svg',
+        nombrePaisRight: 'Paraguay',
+        scoreRight: 0
+      },
+      {
+        idPartido: 2,
+        banderaPaisLeft: './static/images/100_venezuela.svg',
+        nombrePaisLeft: 'Venezuela',
+        scoreLeft: 1,
+        banderaPaisRight: './static/images/100_peru.svg',
+        nombrePaisRight: 'Perú',
+        scoreRight: 2
+      },
+      {
+        idPartido: 3,
+        banderaPaisLeft: './static/images/100_bolivia.svg',
+        nombrePaisLeft: 'Bolivia',
+        scoreLeft: 3,
+        banderaPaisRight: './static/images/100_uruguay.svg',
+        nombrePaisRight: 'Uruguay',
+        scoreRight: 0
+      },
+      {
+        idPartido: 4,
+        banderaPaisLeft: './static/images/100_argentina.svg',
+        nombrePaisLeft: 'Argentina',
+        scoreLeft: 0,
+        banderaPaisRight: './static/images/100_brasil.svg',
+        nombrePaisRight: 'Brasil',
+        scoreRight: 0
+      },
+      {
+        idPartido: 5,
+        banderaPaisLeft: './static/images/100_chile.svg',
+        nombrePaisLeft: 'Chile',
+        scoreLeft: 0,
+        banderaPaisRight: './static/images/100_ecuador.svg',
+        nombrePaisRight: 'Ecuador',
+        scoreRight: 2
+      }
+    ],
+    fecha: 'Viernes 28 de Enero del 2022',
+    estadio: 'Metropolitano Roberto Meléndez'
+  },
+  {
+    id: 2,
+    jornada: 15,
+    partidos: [
+      {
+        idPartido: 1,
+        banderaPaisLeft: './static/images/100_colombia.svg',
+        nombrePaisLeft: 'Colombia',
+        scoreLeft: 0,
+        banderaPaisRight: './static/images/100_peru.svg',
+        nombrePaisRight: 'Perú',
+        scoreRight: 1
+      },
+      {
+        idPartido: 2,
+        banderaPaisLeft: './static/images/100_venezuela.svg',
+        nombrePaisLeft: 'Venezuela',
+        scoreLeft: 4,
+        banderaPaisRight: './static/images/100_bolivia.svg',
+        nombrePaisRight: 'Bolivia',
+        scoreRight: 1
+      },
+      {
+        idPartido: 3,
+        banderaPaisLeft: './static/images/100_paraguay.svg',
+        nombrePaisLeft: 'Paraguay',
+        scoreLeft: 0,
+        banderaPaisRight: './static/images/100_uruguay.svg',
+        nombrePaisRight: 'Uruguay',
+        scoreRight: 1
+      },
+      {
+        idPartido: 4,
+        banderaPaisLeft: './static/images/100_chile.svg',
+        nombrePaisLeft: 'Chile',
+        scoreLeft: 1,
+        banderaPaisRight: './static/images/100_argentina.svg',
+        nombrePaisRight: 'Argentina',
+        scoreRight: 2
+      },
+      {
+        idPartido: 5,
+        banderaPaisLeft: './static/images/100_ecuador.svg',
+        nombrePaisLeft: 'Ecuador',
+        scoreLeft: 1,
+        banderaPaisRight: './static/images/100_brasil.svg',
+        nombrePaisRight: 'Brasil',
+        scoreRight: 1
+      }
+    ],
+    fecha: 'Viernes 28 de Enero del 2022',
+    estadio: 'Metropolitano Roberto Meléndez'
+  },
+  {
+    id: 3,
+    jornada: 16,
+    partidos: [
+      {
+        idPartido: 1,
+        banderaPaisLeft: './static/images/100_uruguay.svg',
+        nombrePaisLeft: 'Uruguay',
+        scoreLeft: 4,
+        banderaPaisRight: './static/images/100_venezuela.svg',
+        nombrePaisRight: 'Venezuela',
+        scoreRight: 1
+      },
+      {
+        idPartido: 2,
+        banderaPaisLeft: './static/images/100_peru.svg',
+        nombrePaisLeft: 'Perú',
+        scoreLeft: 1,
+        banderaPaisRight: './static/images/100_ecuador.svg',
+        nombrePaisRight: 'Ecuador',
+        scoreRight: 1
+      },
+      {
+        idPartido: 3,
+        banderaPaisLeft: './static/images/100_brasil.svg',
+        nombrePaisLeft: 'Brasil',
+        scoreLeft: 4,
+        banderaPaisRight: './static/images/100_paraguay.svg',
+        nombrePaisRight: 'Paraguay',
+        scoreRight: 0
+      },
+      {
+        idPartido: 4,
+        banderaPaisLeft: './static/images/100_bolivia.svg',
+        nombrePaisLeft: 'Bolivia',
+        scoreLeft: 2,
+        banderaPaisRight: './static/images/100_chile.svg',
+        nombrePaisRight: 'Chile',
+        scoreRight: 3
+      },
+      {
+        idPartido: 5,
+        banderaPaisLeft: './static/images/100_argentina.svg',
+        nombrePaisLeft: 'Argentina',
+        scoreLeft: 1,
+        banderaPaisRight: './static/images/100_colombia.svg',
+        nombrePaisRight: 'Colombia',
+        scoreRight: 0
+      }
+    ],
+    fecha: 'Viernes 28 de Enero del 2022',
+    estadio: 'Metropolitano Roberto Meléndez'
+  },
+  {
+    id: 4,
+    jornada: 17,
+    partidos: [
+      {
+        idPartido: 1,
+        banderaPaisLeft: './static/images/100_uruguay.svg',
+        nombrePaisLeft: 'Uruguay',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_peru.svg',
+        nombrePaisRight: 'Perú',
+        scoreRight: ''
+      },
+      {
+        idPartido: 2,
+        banderaPaisLeft: './static/images/100_colombia.svg',
+        nombrePaisLeft: 'Colombia',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_bolivia.svg',
+        nombrePaisRight: 'Bolivia',
+        scoreRight: ''
+      },
+      {
+        idPartido: 3,
+        banderaPaisLeft: './static/images/100_brasil.svg',
+        nombrePaisLeft: 'Brasil',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_chile.svg',
+        nombrePaisRight: 'Chile',
+        scoreRight: ''
+      },
+      {
+        idPartido: 4,
+        banderaPaisLeft: './static/images/100_paraguay.svg',
+        nombrePaisLeft: 'Paraguay',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_ecuador.svg',
+        nombrePaisRight: 'Ecuador',
+        scoreRight: ''
+      },
+      {
+        idPartido: 5,
+        banderaPaisLeft: './static/images/100_argentina.svg',
+        nombrePaisLeft: 'Argentina',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_venezuela.svg',
+        nombrePaisRight: 'Venezuela',
+        scoreRight: ''
+      }
+    ],
+    fecha: 'Viernes 28 de Enero del 2022',
+    estadio: 'Metropolitano Roberto Meléndez'
+  },
+  {
+    id: 5,
+    jornada: 18,
+    partidos: [
+      {
+        idPartido: 1,
+        banderaPaisLeft: './static/images/100_peru.svg',
+        nombrePaisLeft: 'Perú',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_paraguay.svg',
+        nombrePaisRight: 'Paraguay',
+        scoreRight: ''
+      },
+      {
+        idPartido: 2,
+        banderaPaisLeft: './static/images/100_venezuela.svg',
+        nombrePaisLeft: 'Venezuela',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_colombia.svg',
+        nombrePaisRight: 'Colombia',
+        scoreRight: ''
+      },
+      {
+        idPartido: 3,
+        banderaPaisLeft: './static/images/100_bolivia.svg',
+        nombrePaisLeft: 'Bolivia',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_Brasil.svg',
+        nombrePaisRight: 'Brasil',
+        scoreRight: ''
+      },
+      {
+        idPartido: 4,
+        banderaPaisLeft: './static/images/100_chile.svg',
+        nombrePaisLeft: 'Chile',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_uruguay.svg',
+        nombrePaisRight: 'Uruguay',
+        scoreRight: ''
+      },
+      {
+        idPartido: 5,
+        banderaPaisLeft: './static/images/100_ecuador.svg',
+        nombrePaisLeft: 'Ecuador',
+        scoreLeft: '',
+        banderaPaisRight: './static/images/100_argentina.svg',
+        nombrePaisRight: 'Argentina',
+        scoreRight: ''
+      }
+    ],
+    fecha: 'Viernes 28 de Enero del 2022',
+    estadio: 'Metropolitano Roberto Meléndez'
+  }
+]
+
 export const FixturePartidos = [
   [
     {
@@ -344,7 +612,7 @@ export const ArrayPointsTable = [
     PG: 6,
     PE: 3,
     PP: 7,
-    DG: "- 4",
+    DG: -4,
     PTS: 21,
     GF: 17,
     GC: 21
@@ -356,7 +624,7 @@ export const ArrayPointsTable = [
     PG: 5,
     PE: 4,
     PP: 7,
-    DG: "- 1",
+    DG: -1,
     PTS: 19,
     GF: 19,
     GC: 20
@@ -368,7 +636,7 @@ export const ArrayPointsTable = [
     PG: 3,
     PE: 8,
     PP: 5,
-    DG: "- 3",
+    DG: -3,
     PTS: 17,
     GF: 16,
     GC: 19
@@ -380,7 +648,7 @@ export const ArrayPointsTable = [
     PG: 4,
     PE: 3,
     PP: 9,
-    DG: "- 12",
+    DG: -12,
     PTS: 15,
     GF: 23,
     GC: 35
@@ -392,7 +660,7 @@ export const ArrayPointsTable = [
     PG: 2,
     PE: 7,
     PP: 7,
-    DG: "- 14",
+    DG: -14,
     PTS: 13,
     GF: 9,
     GC: 23
@@ -404,7 +672,7 @@ export const ArrayPointsTable = [
     PG: 3,
     PE: 1,
     PP: 12,
-    DG: "- 16",
+    DG: -16,
     PTS: 10,
     GF: 14,
     GC: 30

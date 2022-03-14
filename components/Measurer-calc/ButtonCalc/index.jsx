@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ButtonCalc = ({ onClick, disabled, colorBtn, msjError }) => {
+const ButtonCalc = ({ onClick, disabled, colorBtn, msjError, txt }) => {
   return (
     <WrapperBtn>
       <ButtonCalculator colorBtn={colorBtn} onClick={onClick} disabled={disabled}>
-        Calcular
+        {txt}
       </ButtonCalculator>
       {msjError && <TextError>{msjError}</TextError>}
     </WrapperBtn>

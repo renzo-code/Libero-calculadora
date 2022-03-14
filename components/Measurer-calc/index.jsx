@@ -28,11 +28,11 @@ const MeasurerCalc = ({ table, setTable }) => {
   const [errorColor17, setErrorColor17] = useState(false)
   const [errorColor18, setErrorColor18] = useState(false)
 
-  const  [btnDisabled14, setBtnDisabled14] = useState(true)
-  const  [btnDisabled15, setBtnDisabled15] = useState(true)
-  const  [btnDisabled16, setBtnDisabled16] = useState(true)
-  const  [btnDisabled17, setBtnDisabled17] = useState(false)
-  const  [btnDisabled18, setBtnDisabled18] = useState(false)
+  const [btnDisabled14, setBtnDisabled14] = useState(true)
+  const [btnDisabled15, setBtnDisabled15] = useState(true)
+  const [btnDisabled16, setBtnDisabled16] = useState(true)
+  const [btnDisabled17, setBtnDisabled17] = useState(false)
+  const [btnDisabled18, setBtnDisabled18] = useState(false)
 
   const [colorBtn14, setColorBtn14] = useState('red')
   const [colorBtn15, setColorBtn15] = useState('red')
@@ -43,33 +43,33 @@ const MeasurerCalc = ({ table, setTable }) => {
   // const [isValid, setIsValid] = useState(true)
 
   const arrayStates = [
-    fecha, 
-    fecha13, 
-    fecha14, 
-    fecha15, 
-    fecha16, 
-    fecha17, 
-    fecha18, 
-    error13, 
-    error14, 
-    error15, 
-    error16, 
-    error17, 
-    error18, 
-    errorColor14, 
+    fecha,
+    fecha13,
+    fecha14,
+    fecha15,
+    fecha16,
+    fecha17,
+    fecha18,
+    error13,
+    error14,
+    error15,
+    error16,
+    error17,
+    error18,
+    errorColor14,
     errorColor15,
     errorColor16,
     errorColor17,
     errorColor18,
-    btnDisabled14, 
-    btnDisabled15, 
-    btnDisabled16, 
-    btnDisabled17, 
+    btnDisabled14,
+    btnDisabled15,
+    btnDisabled16,
+    btnDisabled17,
     btnDisabled18,
-    colorBtn14, 
-    colorBtn15, 
-    colorBtn16, 
-    colorBtn17, 
+    colorBtn14,
+    colorBtn15,
+    colorBtn16,
+    colorBtn17,
     colorBtn18
   ]
 
@@ -78,6 +78,9 @@ const MeasurerCalc = ({ table, setTable }) => {
     const newArray = data.map((f) => {
       if (f.id === id) {
         const x = valid ? value : f[name]
+        console.log(data)
+        console.log(valid)
+        console.log(value)
         return {
           ...f,
           [name]: x
@@ -128,12 +131,12 @@ const MeasurerCalc = ({ table, setTable }) => {
   const CalcPoints = (f, n) => {
     let isValid = true
     f.forEach((item) => {
-      console.log('calc',item.score1.length, item.score2.length)
+      console.log('calc', item.score1.length, item.score2.length)
       if (item.score1.length === 0 || item.score2.length === 0) {
         isValid = false
       }
     })
-    
+
     console.log('item', isValid)
     if (!isValid) {
       //suma puntos llenos las casillas
@@ -149,7 +152,7 @@ const MeasurerCalc = ({ table, setTable }) => {
       setErrorColor16(true)
       setErrorColor17(true)
       setErrorColor18(true)
-      
+
       // setBtnDisabled14(false)
       setBtnDisabled15(false)
       setBtnDisabled16(false)
@@ -165,34 +168,34 @@ const MeasurerCalc = ({ table, setTable }) => {
       setError15(false)
       setError17(false)
       setError18(false)
-      
+
       setErrorColor14(false)
       setErrorColor15(false)
       setErrorColor16(false)
       setErrorColor17(false)
       setErrorColor18(false)
 
-      if (n === 15){
+      if (n === 15) {
         setBtnDisabled15(true)
         setColorBtn15('red')
       }
-      else if (n === 16){
+      else if (n === 16) {
         setBtnDisabled16(true)
         setColorBtn16('red')
       }
-      else if (n === 17){
+      else if (n === 17) {
         setBtnDisabled17(true)
         setColorBtn17('red')
       }
-      else if (n === 18){
+      else if (n === 18) {
         setBtnDisabled18(true)
         setColorBtn18('red')
       }
-      
+
       f.filter(item => item.score1.length > 0 && item.score2.length > 0)
-      .forEach((item, i) => {
-        validatedVs(item)
-      })
+        .forEach((item, i) => {
+          validatedVs(item)
+        })
     }
   }
 
@@ -350,19 +353,19 @@ const MeasurerCalc = ({ table, setTable }) => {
 
   return (
     <>
-    <ContainerMeasurer>
-      {partidosxFecha}
+      <ContainerMeasurer>
+        {partidosxFecha}
 
-      <ContainerBar>
-        {/* <SquareComponent onClick={() => setFecha(13)} number="13" /> */}
-        <SquareComponent onClick={() => setFecha(14)} number="14" />
-        <SquareComponent onClick={() => setFecha(15)} number="15" />
-        <SquareComponent onClick={() => setFecha(16)} number="16" />
-        <SquareComponent onClick={() => setFecha(17)} number="17" />
-        <SquareComponent onClick={() => setFecha(18)} number="18" />
-      </ContainerBar>
+        <ContainerBar>
+          {/* <SquareComponent onClick={() => setFecha(13)} number="13" /> */}
+          <SquareComponent onClick={() => setFecha(14)} number="14" />
+          <SquareComponent onClick={() => setFecha(15)} number="15" />
+          <SquareComponent onClick={() => setFecha(16)} number="16" />
+          <SquareComponent onClick={() => setFecha(17)} number="17" />
+          <SquareComponent onClick={() => setFecha(18)} number="18" />
+        </ContainerBar>
 
-    </ContainerMeasurer>
+      </ContainerMeasurer>
     </>
   )
 }
