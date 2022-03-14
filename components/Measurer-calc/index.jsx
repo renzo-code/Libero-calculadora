@@ -239,7 +239,7 @@ const MeasurerCalc = ({ table, setTable }) => {
                 score1={item.score1}
                 score2={item.score2}
                 handleInput={(e) => handleInput(e, setFecha14, item.id, fecha14)}
-              />
+              />   
             })
           }
           {errorColor14 && <ButtonCalc colorBtn={colorBtn14} onClick={() => { CalcPoints(fecha14) }} />}
