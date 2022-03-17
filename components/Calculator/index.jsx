@@ -4,10 +4,133 @@ import styled from 'styled-components'
 import MeasurerCalc from '../Measurer-calc'
 import TableCalcPositions from '../Table-calc/table'
 import MesurerCalcLine from '../MesurerCalcLine'
-import { ArrayPointsTable } from '../../const/index'
+// import { ArrayPointsTable } from '../../const/index'
 import exportAsImage from '../../src/utils/exportAsImage'
 
 const Calculator = () => {
+  
+  const ArrayPointsTable = [
+    {
+      pais: 'Brasil',
+      logo: './static/images/100_brasil.svg',
+      PJ: 15,
+      PG: 12,
+      PE: 3,
+      PP: 0,
+      DG: 27,
+      PTS: 39,
+      GF: 32,
+      GC: 5
+    },
+    {
+      pais: 'Argentina',
+      logo: './static/images/100_argentina.svg',
+      PJ: 15,
+      PG: 10,
+      PE: 5,
+      PP: 0,
+      DG: 16,
+      PTS: 35,
+      GF: 23,
+      GC: 7
+    },
+    {
+      pais: 'Ecuador',
+      logo: './static/images/100_ecuador.svg',
+      PJ: 16,
+      PG: 7,
+      PE: 4,
+      PP: 5,
+      DG: 10,
+      PTS: 25,
+      GF: 25,
+      GC: 15
+    },
+    {
+      pais: 'Uruguay',
+      logo: './static/images/100_uruguay.svg',
+      PJ: 16,
+      PG: 6, 
+      PE: 4,
+      PP: 6,
+      DG: -3,
+      PTS: 22,
+      GF: 19,
+      GC: 22
+    },
+    {
+      pais: 'Perú',
+      logo: './static/images/100_peru.svg',
+      PJ: 16,
+      PG: 6,
+      PE: 3,
+      PP: 7,
+      DG: -4,
+      PTS: 21,
+      GF: 17,
+      GC: 21
+    },
+    {
+      pais: 'Chile',
+      logo: './static/images/100_chile.svg',
+      PJ: 16,
+      PG: 5,
+      PE: 4,
+      PP: 7,
+      DG: -1,
+      PTS: 19,
+      GF: 19,
+      GC: 20
+    },
+    {
+      pais: 'Colombia',
+      logo: './static/images/100_colombia.svg',
+      PJ: 16,
+      PG: 3,
+      PE: 8,
+      PP: 5,
+      DG: -3,
+      PTS: 17,
+      GF: 16,
+      GC: 19
+    },
+    {
+      pais: 'Bolivia',
+      logo: './static/images/100_bolivia.svg',
+      PJ: 16,
+      PG: 4,
+      PE: 3,
+      PP: 9,
+      DG: -12,
+      PTS: 15,
+      GF: 23,
+      GC: 35
+    },
+    {
+      pais: 'Paraguay',
+      logo: './static/images/100_paraguay.svg',
+      PJ: 16,
+      PG: 2,
+      PE: 7,
+      PP: 7,
+      DG: -14,
+      PTS: 13,
+      GF: 9,
+      GC: 23
+    },
+    {
+      pais: 'Venezuela',
+      logo: './static/images/100_venezuela.svg',
+      PJ: 16,
+      PG: 3,
+      PE: 1,
+      PP: 12,
+      DG: -16,
+      PTS: 10,
+      GF: 14,
+      GC: 30
+    }
+  ]
   const [table, setTable] = useState(ArrayPointsTable)
   const exportRef = useRef();
   return (
@@ -17,12 +140,10 @@ const Calculator = () => {
         Usa nuestra calculadora, pronostica resultados y mira si tu selección alcanzará un cupo para el Mundial que se disputará en Qatar el 2022.
       </Bajada>
       {/* <MeasurerCalc table={table} setTable={setTable} /> */}
-      <MesurerCalcLine table={table} setTable={setTable} />
-      <div ref={exportRef}>
-        <TableCalcPositions table={table} setTable={setTable} />
-      </div>
+      <MesurerCalcLine originTable={ArrayPointsTable} table={table} setTable={setTable} />
+      <TableCalcPositions referencia={exportRef} table={table} />
       <Bajada>Descarga tu predicción Eliminatorias Sudamérica Qatar 2022</Bajada>
-      <BtnDowload onClick={() => exportAsImage(exportRef.current, "test")}>Descargar</BtnDowload>
+      <BtnDowload onClick={() => exportAsImage(exportRef.current, "Predicción")}>Descargar</BtnDowload>
     </Container>
   )
 }

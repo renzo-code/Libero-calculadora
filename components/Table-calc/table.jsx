@@ -1,14 +1,13 @@
 import React from 'react'
-
+import { ArrayPointsTable } from '../../const'
 import styled from 'styled-components'
 import LineEstadistics from './LineEstadistics'
-import { ArrayPointsTable } from '../../const/index'
 
-const TableCalcPositions = ({ table, setTable }) => {
+const TableCalcPositions = ({ table, referencia }) => {
 
   const ListarEqipos = () => {
 
-      const newArray = ArrayPointsTable.sort((a, b) => {
+      const newArray = table.sort((a, b) => {
         if ((a.PTS > b.PTS && a.DG < b.DG) || a.PTS > b.PTS) {
           return -1;
         }
@@ -17,6 +16,7 @@ const TableCalcPositions = ({ table, setTable }) => {
         }
         return 0;
       })
+
       return newArray.map((item, i) => {
           if (i < 4) {
             return (
@@ -83,7 +83,7 @@ const TableCalcPositions = ({ table, setTable }) => {
 
   return (
     <>
-      <div className='contentScroll'>
+      <div ref={referencia} className='contentScroll'>
         <ContainerTable>
           <WrapperHead>
             <NumberPosition>

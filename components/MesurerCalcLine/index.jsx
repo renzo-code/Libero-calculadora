@@ -1,13 +1,12 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { partidosPorFecha } from '../../const'
 import BlockVs from './BlockVs'
 import styled from 'styled-components'
 import ButtonCalc from '../Measurer-calc/ButtonCalc'
 
-const MesurerCalcLine = ({ table, setTable }) => {
+const MesurerCalcLine = ({ table, setTable, originTable }) => {
 
   const ID_FECHA_ACTUAL = 3
-
   const [idFecha, setIdFecha] = useState(ID_FECHA_ACTUAL)
   const [ultimaFechaData, setUltimaFechaData] = useState(ID_FECHA_ACTUAL)
 
@@ -24,18 +23,6 @@ const MesurerCalcLine = ({ table, setTable }) => {
   const handleCambiarFecha = (num) => {
     setIdFecha(idFecha + num)
     setErrorCalculo(false)
-  }
-
-  const handleClean = (data, fn) => {
-    const newArray = data.partidos.map((f) => {
-      return {
-        ...f,
-        scoreLeft: "",
-        scoreRight: ""
-      }
-    })
-    fn({ ...data, partidos: [...newArray] })
-    console.log(newArray)
   }
 
   const handleInput = (e, fn, id, data) => {
@@ -75,6 +62,29 @@ const MesurerCalcLine = ({ table, setTable }) => {
     }
   }
 
+  
+
+  const handleClean = () => {
+    const newArray_1 = fecha17.partidos.map((f) => {
+      return {
+        ...f,
+        scoreLeft: "",
+        scoreRight: ""
+      }
+    })
+    const newArray_2 = fecha18.partidos.map((f) => {
+      return {
+        ...f,
+        scoreLeft: "",
+        scoreRight: ""
+      }
+    })
+    setFecha17({ ...fecha17, partidos: [...newArray_1] })
+    setFecha18({ ...fecha18, partidos: [...newArray_2] })
+    setTable(originTable)
+    setUltimaFechaData(ID_FECHA_ACTUAL)
+  }
+
   const getInfoCountry = (country) => {
     return table.find((t) => t.pais === country)
   }
@@ -82,7 +92,7 @@ const MesurerCalcLine = ({ table, setTable }) => {
   const validatedVs = (partido) => {
     const info1 = getInfoCountry(partido.nombrePaisLeft)
     const info2 = getInfoCountry(partido.nombrePaisRight)
-
+    console.log(info1, info2)
     if (partido.scoreLeft > partido.scoreRight) {
       info1.PJ = info1.PJ + 1
       info2.PJ = info2.PJ + 1
@@ -107,7 +117,8 @@ const MesurerCalcLine = ({ table, setTable }) => {
       info2.PTS = info2.PTS + 1
       info1.PTS = info1.PTS + 1
     }
-    setTable([...table, info1, info2])
+    console.log(info1, info2)
+    setTable([...table], info1, info2)
   }
 
   const CalcPoints = (item) => {
@@ -131,8 +142,6 @@ const MesurerCalcLine = ({ table, setTable }) => {
     }
   }
 
-  console.log(fecha17.partidos)
-
   const MostrarDataFecha = () => {
     return (
       <>
@@ -148,6 +157,8 @@ const MesurerCalcLine = ({ table, setTable }) => {
               handleInput={(e) => handleInput(e, setFecha(idFecha), partido.idPartido, fecha(idFecha))}
               idJornadaActual={ultimaFechaData}
               idJornadaSelect={fecha(idFecha).id}
+              fechaPartido={partido.date}
+              estadioPartido={partido.estadio}
             />
           ))
         }
@@ -155,13 +166,12 @@ const MesurerCalcLine = ({ table, setTable }) => {
     )
   }
 
-  const partidosxFecha = useMemo(() => MostrarDataFecha(), [fecha])
+  const partidosxFecha = useMemo(() => MostrarDataFecha(), [MostrarDataFecha])
 
   return (
     <>
       <SelectedDate>{`FECHA ${fecha(idFecha).jornada}`}</SelectedDate>
       <div className='contentScroll-calc'>
-
         <ContainerMesurer>
           {partidosxFecha}
         </ContainerMesurer>
@@ -172,7 +182,7 @@ const MesurerCalcLine = ({ table, setTable }) => {
           onClick={() => handleCambiarFecha(-1)}
           disabled={idFecha <= 1 ? true : false}
         >
-          <svg enable-background="new 0 0 32 32" id="1" version="1.1" viewBox="0 0 32 32" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink"><path d="M22.285,15.349L16,21.544l-6.285-6.196c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   l6.999,6.899c0.379,0.375,1.048,0.377,1.429,0l6.999-6.9c0.394-0.39,0.394-1.024,0-1.414   C23.319,14.958,22.679,14.958,22.285,15.349z" fill="#121313" /><path d="M15.286,16.662c0.379,0.375,1.048,0.377,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   c-0.394-0.391-1.034-0.391-1.428,0L16,14.544L9.715,8.349c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   L15.286,16.662z" fill="#121313" /></svg>
+          <svg enableBackground="new 0 0 32 32" id="1" version="1.1" viewBox="0 0 32 32" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink"><path d="M22.285,15.349L16,21.544l-6.285-6.196c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   l6.999,6.899c0.379,0.375,1.048,0.377,1.429,0l6.999-6.9c0.394-0.39,0.394-1.024,0-1.414   C23.319,14.958,22.679,14.958,22.285,15.349z" fill="#121313" /><path d="M15.286,16.662c0.379,0.375,1.048,0.377,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   c-0.394-0.391-1.034-0.391-1.428,0L16,14.544L9.715,8.349c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   L15.286,16.662z" fill="#121313" /></svg>
         </button>
         <ButtonCalc txt={'Limpiar'} disabled={idFecha > ID_FECHA_ACTUAL ? false : true} colorBtn={idFecha > ID_FECHA_ACTUAL ? 'green' : 'red'} onClick={() => { handleClean(fecha(idFecha), setFecha(idFecha)) }} />
         <ButtonCalc txt={'Calcular'} disabled={idFecha > ultimaFechaData ? false : true} colorBtn={idFecha > ultimaFechaData ? 'green' : 'red'} onClick={() => { CalcPoints(fecha(idFecha)) }} />
@@ -180,7 +190,7 @@ const MesurerCalcLine = ({ table, setTable }) => {
           onClick={() => handleCambiarFecha(1)}
           disabled={idFecha >= 5 ? true : false}
         >
-          <svg enable-background="new 0 0 32 32" id="1" version="1.1" viewBox="0 0 32 32" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink"><path d="M22.285,15.349L16,21.544l-6.285-6.196c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   l6.999,6.899c0.379,0.375,1.048,0.377,1.429,0l6.999-6.9c0.394-0.39,0.394-1.024,0-1.414   C23.319,14.958,22.679,14.958,22.285,15.349z" fill="#121313" /><path d="M15.286,16.662c0.379,0.375,1.048,0.377,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   c-0.394-0.391-1.034-0.391-1.428,0L16,14.544L9.715,8.349c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   L15.286,16.662z" fill="#121313" /></svg>
+          <svg enableBackground="new 0 0 32 32" id="1" version="1.1" viewBox="0 0 32 32" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink"><path d="M22.285,15.349L16,21.544l-6.285-6.196c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   l6.999,6.899c0.379,0.375,1.048,0.377,1.429,0l6.999-6.9c0.394-0.39,0.394-1.024,0-1.414   C23.319,14.958,22.679,14.958,22.285,15.349z" fill="#121313" /><path d="M15.286,16.662c0.379,0.375,1.048,0.377,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   c-0.394-0.391-1.034-0.391-1.428,0L16,14.544L9.715,8.349c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   L15.286,16.662z" fill="#121313" /></svg>
         </button>
       </div>
 
@@ -232,6 +242,13 @@ const MesurerCalcLine = ({ table, setTable }) => {
           transform: rotate(270deg);
           height: 23px;
         }
+
+        @media (max-width: 480px) {
+          .buttonMesureContainer {
+            width: 100%;
+            padding: 0 10px;
+          }
+        }
       `}</style>
     </>
   )
@@ -247,6 +264,10 @@ const ContainerMesurer = styled.div`
   width: 1300px;
   margin: 0 auto;
   background-color: #EEEEEE;
+
+  @media (max-width: 480px) {
+    width: 1000px;
+  }
 `
 
 const SelectedDate = styled.h3`

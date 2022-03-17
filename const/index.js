@@ -10,7 +10,9 @@ export const partidosPorFecha = [
         scoreLeft: 0,
         banderaPaisRight: './static/images/100_paraguay.svg',
         nombrePaisRight: 'Paraguay',
-        scoreRight: 0
+        scoreRight: 0,
+        date: 'Martes 16 noviembre 2021',
+        estadio: 'Metropolitano Roberto Meléndez'
       },
       {
         idPartido: 2,
@@ -19,7 +21,9 @@ export const partidosPorFecha = [
         scoreLeft: 1,
         banderaPaisRight: './static/images/100_peru.svg',
         nombrePaisRight: 'Perú',
-        scoreRight: 2
+        scoreRight: 2,
+        date: 'Martes 16 noviembre 2021',
+        estadio: 'Estadio Olímpico de la UCV'
       },
       {
         idPartido: 3,
@@ -28,7 +32,9 @@ export const partidosPorFecha = [
         scoreLeft: 3,
         banderaPaisRight: './static/images/100_uruguay.svg',
         nombrePaisRight: 'Uruguay',
-        scoreRight: 0
+        scoreRight: 0,
+        date: 'Martes 16 noviembre 2021',
+        estadio: 'Estadio Hernando Siles'
       },
       {
         idPartido: 4,
@@ -37,7 +43,9 @@ export const partidosPorFecha = [
         scoreLeft: 0,
         banderaPaisRight: './static/images/100_brasil.svg',
         nombrePaisRight: 'Brasil',
-        scoreRight: 0
+        scoreRight: 0,
+        date: 'Martes 16 noviembre 2021',
+        estadio: 'San Juan del Bicentenario'
       },
       {
         idPartido: 5,
@@ -46,11 +54,11 @@ export const partidosPorFecha = [
         scoreLeft: 0,
         banderaPaisRight: './static/images/100_ecuador.svg',
         nombrePaisRight: 'Ecuador',
-        scoreRight: 2
+        scoreRight: 2,
+        date: 'Martes 16 noviembre 2021',
+        estadio: 'Estadio San Carlos de Apoquindo'
       }
-    ],
-    fecha: 'Viernes 28 de Enero del 2022',
-    estadio: 'Metropolitano Roberto Meléndez'
+    ]
   },
   {
     id: 2,
@@ -63,7 +71,9 @@ export const partidosPorFecha = [
         scoreLeft: 0,
         banderaPaisRight: './static/images/100_peru.svg',
         nombrePaisRight: 'Perú',
-        scoreRight: 1
+        scoreRight: 1,
+        date: 'Viernes 28 enero 2022',
+        estadio: 'Metropolitano Roberto Meléndez'
       },
       {
         idPartido: 2,
@@ -72,7 +82,9 @@ export const partidosPorFecha = [
         scoreLeft: 4,
         banderaPaisRight: './static/images/100_bolivia.svg',
         nombrePaisRight: 'Bolivia',
-        scoreRight: 1
+        scoreRight: 1,
+        date: 'Viernes 28 enero 2022',
+        estadio: 'Estadio Agustín Tovar'
       },
       {
         idPartido: 3,
@@ -81,7 +93,9 @@ export const partidosPorFecha = [
         scoreLeft: 0,
         banderaPaisRight: './static/images/100_uruguay.svg',
         nombrePaisRight: 'Uruguay',
-        scoreRight: 1
+        scoreRight: 1,
+        date: 'Jueves 27 enero 2022',
+        estadio: 'Estadio General Pablo Rojas'
       },
       {
         idPartido: 4,
@@ -90,7 +104,9 @@ export const partidosPorFecha = [
         scoreLeft: 1,
         banderaPaisRight: './static/images/100_argentina.svg',
         nombrePaisRight: 'Argentina',
-        scoreRight: 2
+        scoreRight: 2,
+        date: 'Jueves 27 enero 2022',
+        estadio: 'Estadio Zorros del Desierto'
       },
       {
         idPartido: 5,
@@ -99,11 +115,11 @@ export const partidosPorFecha = [
         scoreLeft: 1,
         banderaPaisRight: './static/images/100_brasil.svg',
         nombrePaisRight: 'Brasil',
-        scoreRight: 1
+        scoreRight: 1,
+        date: 'Jueves 27 enero 2022',
+        estadio: 'Rodrigo Paz Delgado'
       }
-    ],
-    fecha: 'Viernes 28 de Enero del 2022',
-    estadio: 'Metropolitano Roberto Meléndez'
+    ]
   },
   {
     id: 3,
@@ -116,7 +132,9 @@ export const partidosPorFecha = [
         scoreLeft: 4,
         banderaPaisRight: './static/images/100_venezuela.svg',
         nombrePaisRight: 'Venezuela',
-        scoreRight: 1
+        scoreRight: 1,
+        date: 'Martes 1 febrero 2022',
+        estadio: 'Estadio Centenario'
       },
       {
         idPartido: 2,
@@ -125,7 +143,9 @@ export const partidosPorFecha = [
         scoreLeft: 1,
         banderaPaisRight: './static/images/100_ecuador.svg',
         nombrePaisRight: 'Ecuador',
-        scoreRight: 1
+        scoreRight: 1,
+        date: 'Martes 1 febrero 2022',
+        estadio: 'Estadio Nacional de Lima'
       },
       {
         idPartido: 3,
@@ -134,7 +154,9 @@ export const partidosPorFecha = [
         scoreLeft: 4,
         banderaPaisRight: './static/images/100_paraguay.svg',
         nombrePaisRight: 'Paraguay',
-        scoreRight: 0
+        scoreRight: 0,
+        date: 'Martes 1 febrero 2022',
+        estadio: 'Estadio Mineirão'
       },
       {
         idPartido: 4,
@@ -143,7 +165,9 @@ export const partidosPorFecha = [
         scoreLeft: 2,
         banderaPaisRight: './static/images/100_chile.svg',
         nombrePaisRight: 'Chile',
-        scoreRight: 3
+        scoreRight: 3,
+        date: 'Martes 1 febrero 2022',
+        estadio: 'Estadio Hernando Siles'
       },
       {
         idPartido: 5,
@@ -152,11 +176,11 @@ export const partidosPorFecha = [
         scoreLeft: 1,
         banderaPaisRight: './static/images/100_colombia.svg',
         nombrePaisRight: 'Colombia',
-        scoreRight: 0
+        scoreRight: 0,
+        date: 'Martes 1 febrero 2022',
+        estadio: 'Mario Alberto Kempes'
       }
-    ],
-    fecha: 'Viernes 28 de Enero del 2022',
-    estadio: 'Metropolitano Roberto Meléndez'
+    ]
   },
   {
     id: 4,
@@ -169,7 +193,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_peru.svg',
         nombrePaisRight: 'Perú',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Jueves 24 marzo 2022',
+        estadio: 'Estadio Centenario'
       },
       {
         idPartido: 2,
@@ -178,7 +204,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_bolivia.svg',
         nombrePaisRight: 'Bolivia',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Jueves 24 marzo 2022',
+        estadio: 'Metropolitano Roberto Meléndez'
       },
       {
         idPartido: 3,
@@ -187,7 +215,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_chile.svg',
         nombrePaisRight: 'Chile',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Jueves 24 marzo 2022',
+        estadio: 'Estadio do Maracanã'
       },
       {
         idPartido: 4,
@@ -196,7 +226,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_ecuador.svg',
         nombrePaisRight: 'Ecuador',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Jueves 24 marzo 2022',
+        estadio: 'Estadio Antonio Aranda'
       },
       {
         idPartido: 5,
@@ -205,11 +237,11 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_venezuela.svg',
         nombrePaisRight: 'Venezuela',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Viernes 25 marzo 2022',
+        estadio: 'Alberto José Armando (La Bombonera)'
       }
-    ],
-    fecha: 'Viernes 28 de Enero del 2022',
-    estadio: 'Metropolitano Roberto Meléndez'
+    ]
   },
   {
     id: 5,
@@ -222,7 +254,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_paraguay.svg',
         nombrePaisRight: 'Paraguay',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Martes 29 marzo 2022',
+        estadio: 'Estadio Nacional de Lima'
       },
       {
         idPartido: 2,
@@ -231,7 +265,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_colombia.svg',
         nombrePaisRight: 'Colombia',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Martes 29 marzo 2022',
+        estadio: 'CTE Cachamay'
       },
       {
         idPartido: 3,
@@ -240,7 +276,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_Brasil.svg',
         nombrePaisRight: 'Brasil',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Martes 29 marzo 2022',
+        estadio: 'Estadio Hernando Siles'
       },
       {
         idPartido: 4,
@@ -249,7 +287,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_uruguay.svg',
         nombrePaisRight: 'Uruguay',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Martes 29 marzo 2022',
+        estadio: 'Estadio San Carlos de Apoquindo'
       },
       {
         idPartido: 5,
@@ -258,7 +298,9 @@ export const partidosPorFecha = [
         scoreLeft: '',
         banderaPaisRight: './static/images/100_argentina.svg',
         nombrePaisRight: 'Argentina',
-        scoreRight: ''
+        scoreRight: '',
+        date: 'Martes 29 marzo 2022',
+        estadio: 'Estadio Monumental Banco Pichincha'
       }
     ],
     fecha: 'Viernes 28 de Enero del 2022',
@@ -556,128 +598,128 @@ export const FixturePartidos = [
   ]
 ]
 
-export const ArrayPointsTable = [
-  {
-    pais: 'Brasil',
-    logo: './static/images/100_brasil.svg',
-    PJ: 15,
-    PG: 12,
-    PE: 3,
-    PP: 0,
-    DG: 27,
-    PTS: 39,
-    GF: 32,
-    GC: 5
-  },
-  {
-    pais: 'Argentina',
-    logo: './static/images/100_argentina.svg',
-    PJ: 15,
-    PG: 10,
-    PE: 5,
-    PP: 0,
-    DG: 16,
-    PTS: 35,
-    GF: 23,
-    GC: 7
-  },
-  {
-    pais: 'Ecuador',
-    logo: './static/images/100_ecuador.svg',
-    PJ: 16,
-    PG: 7,
-    PE: 4,
-    PP: 5,
-    DG: 10,
-    PTS: 25,
-    GF: 25,
-    GC: 15
-  },
-  {
-    pais: 'Uruguay',
-    logo: './static/images/100_uruguay.svg',
-    PJ: 16,
-    PG: 6, 
-    PE: 4,
-    PP: 6,
-    DG: -3,
-    PTS: 22,
-    GF: 19,
-    GC: 22
-  },
-  {
-    pais: 'Perú',
-    logo: './static/images/100_peru.svg',
-    PJ: 16,
-    PG: 6,
-    PE: 3,
-    PP: 7,
-    DG: -4,
-    PTS: 21,
-    GF: 17,
-    GC: 21
-  },
-  {
-    pais: 'Chile',
-    logo: './static/images/100_chile.svg',
-    PJ: 16,
-    PG: 5,
-    PE: 4,
-    PP: 7,
-    DG: -1,
-    PTS: 19,
-    GF: 19,
-    GC: 20
-  },
-  {
-    pais: 'Colombia',
-    logo: './static/images/100_colombia.svg',
-    PJ: 16,
-    PG: 3,
-    PE: 8,
-    PP: 5,
-    DG: -3,
-    PTS: 17,
-    GF: 16,
-    GC: 19
-  },
-  {
-    pais: 'Bolivia',
-    logo: './static/images/100_bolivia.svg',
-    PJ: 16,
-    PG: 4,
-    PE: 3,
-    PP: 9,
-    DG: -12,
-    PTS: 15,
-    GF: 23,
-    GC: 35
-  },
-  {
-    pais: 'Paraguay',
-    logo: './static/images/100_paraguay.svg',
-    PJ: 16,
-    PG: 2,
-    PE: 7,
-    PP: 7,
-    DG: -14,
-    PTS: 13,
-    GF: 9,
-    GC: 23
-  },
-  {
-    pais: 'Venezuela',
-    logo: './static/images/100_venezuela.svg',
-    PJ: 16,
-    PG: 3,
-    PE: 1,
-    PP: 12,
-    DG: -16,
-    PTS: 10,
-    GF: 14,
-    GC: 30
-  }
-]
+// export const ArrayPointsTable = [
+//   {
+//     pais: 'Brasil',
+//     logo: './static/images/100_brasil.svg',
+//     PJ: 15,
+//     PG: 12,
+//     PE: 3,
+//     PP: 0,
+//     DG: 27,
+//     PTS: 39,
+//     GF: 32,
+//     GC: 5
+//   },
+//   {
+//     pais: 'Argentina',
+//     logo: './static/images/100_argentina.svg',
+//     PJ: 15,
+//     PG: 10,
+//     PE: 5,
+//     PP: 0,
+//     DG: 16,
+//     PTS: 35,
+//     GF: 23,
+//     GC: 7
+//   },
+//   {
+//     pais: 'Ecuador',
+//     logo: './static/images/100_ecuador.svg',
+//     PJ: 16,
+//     PG: 7,
+//     PE: 4,
+//     PP: 5,
+//     DG: 10,
+//     PTS: 25,
+//     GF: 25,
+//     GC: 15
+//   },
+//   {
+//     pais: 'Uruguay',
+//     logo: './static/images/100_uruguay.svg',
+//     PJ: 16,
+//     PG: 6, 
+//     PE: 4,
+//     PP: 6,
+//     DG: -3,
+//     PTS: 22,
+//     GF: 19,
+//     GC: 22
+//   },
+//   {
+//     pais: 'Perú',
+//     logo: './static/images/100_peru.svg',
+//     PJ: 16,
+//     PG: 6,
+//     PE: 3,
+//     PP: 7,
+//     DG: -4,
+//     PTS: 21,
+//     GF: 17,
+//     GC: 21
+//   },
+//   {
+//     pais: 'Chile',
+//     logo: './static/images/100_chile.svg',
+//     PJ: 16,
+//     PG: 5,
+//     PE: 4,
+//     PP: 7,
+//     DG: -1,
+//     PTS: 19,
+//     GF: 19,
+//     GC: 20
+//   },
+//   {
+//     pais: 'Colombia',
+//     logo: './static/images/100_colombia.svg',
+//     PJ: 16,
+//     PG: 3,
+//     PE: 8,
+//     PP: 5,
+//     DG: -3,
+//     PTS: 17,
+//     GF: 16,
+//     GC: 19
+//   },
+//   {
+//     pais: 'Bolivia',
+//     logo: './static/images/100_bolivia.svg',
+//     PJ: 16,
+//     PG: 4,
+//     PE: 3,
+//     PP: 9,
+//     DG: -12,
+//     PTS: 15,
+//     GF: 23,
+//     GC: 35
+//   },
+//   {
+//     pais: 'Paraguay',
+//     logo: './static/images/100_paraguay.svg',
+//     PJ: 16,
+//     PG: 2,
+//     PE: 7,
+//     PP: 7,
+//     DG: -14,
+//     PTS: 13,
+//     GF: 9,
+//     GC: 23
+//   },
+//   {
+//     pais: 'Venezuela',
+//     logo: './static/images/100_venezuela.svg',
+//     PJ: 16,
+//     PG: 3,
+//     PE: 1,
+//     PP: 12,
+//     DG: -16,
+//     PTS: 10,
+//     GF: 14,
+//     GC: 30
+//   }
+// ]
 
 export const ArrayScorers = [
   {

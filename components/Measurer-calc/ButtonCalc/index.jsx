@@ -18,6 +18,10 @@ const WrapperBtn = styled.div`
   height: auto;
   width: 130px;
   margin: 0 auto;
+  @media (max-width: 480px) {
+    width: 100px;
+    margin: 0 5px;
+  }
 `
 const ButtonCalculator = styled.button`
   height: 28px;

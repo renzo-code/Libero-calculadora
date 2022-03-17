@@ -2,7 +2,17 @@ import React from 'react'
 import InputScore from '../../InputScore'
 import styled from 'styled-components'
 
-const BlockVs = ({ banderaPaisLeft, banderaPaisRight, scoreLeft, scoreRight, handleInput, idJornadaActual, idJornadaSelect }) => {
+const BlockVs = ({ 
+  banderaPaisLeft,
+  banderaPaisRight,
+  scoreLeft,
+  scoreRight,
+  handleInput,
+  idJornadaActual,
+  idJornadaSelect,
+  fechaPartido,
+  estadioPartido
+}) => {
   
   return (
     <ContainerVs>
@@ -36,8 +46,8 @@ const BlockVs = ({ banderaPaisLeft, banderaPaisRight, scoreLeft, scoreRight, han
           idJornadaActual = {idJornadaActual}
         />
       </BlockScore>
-      <Date>Viernes 28 de Enero del 2022</Date>
-      <Place>Metropolitano Roberto Meléndez</Place>
+      <Date>{fechaPartido}</Date>
+      <Place>{estadioPartido}</Place>
     </ContainerVs>
   )
 }

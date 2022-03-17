@@ -13,7 +13,7 @@ const Footer = () => {
           </Wrappertitle>
           <Wrappertitle>
             <TitleFooter>Desarrollo Web: </TitleFooter>
-              <Drafting> Renzo Neira</Drafting>
+              <Drafting> Renzo Neira y Alejandro Mayurí</Drafting>
           </Wrappertitle>
           <Wrappertitle>
             <TitleFooter>Diseño: </TitleFooter>
