@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import Footer from '../components/Footer'
 import TableScorers from '../components/TableScorers/index.jsx'
 import Social from '../components/Social/index.jsx'
+import Acordeon from '../components/Acordeon/index.jsx'
 
 const Home = () => {
   return(
@@ -13,7 +14,8 @@ const Home = () => {
       <Layout>
         <Social/>
         <Calculator/>
-        <TableScorers/>
+        {/* <TableScorers/> */}
+        <Acordeon/>
       </Layout>
       <Footer/>
     </>

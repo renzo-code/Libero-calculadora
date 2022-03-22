@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const Social = () => {
+
+    const [copy, setCopy] = useState(false)
+
+    const handleFalse = () => setCopy(false)
+
+    const handleIframe = () => {
+        navigator.clipboard.writeText('https://especiales.libero.pe/calculadora-eliminatoria-qatar-2022')
+        setCopy(true)
+        setTimeout(handleFalse, 2000)
+    }
+
     return (
         <ContainerSociales>
             <SocialesInner>
@@ -22,7 +33,7 @@ const Social = () => {
                             </path>
                         </svg>
                     </a>
-                    <a id="id-btn-wsp" className="btn-copy" href="javascript:void(0)" rel="noopener">
+                    <a id="id-btn-wsp" className="btn-copy" href="javascript:void(0)" rel="noopener" onClick={handleIframe}>
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512"
                             height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -36,7 +47,14 @@ const Social = () => {
                         </svg>
                     </a>
                 </span>
-                <style jsx={true}>{`
+                
+            </SocialesInner>
+            {
+                copy
+                ? <p className='copy-text'>URL copiado en el portapapeles</p>
+                : null
+            }
+           <style jsx={true}>{`
                     span.sociales {
                         float: right;
                         margin-top: 7px;
@@ -72,8 +90,16 @@ const Social = () => {
                         width: 100%;
                         color: #fff;
                     }
+                    .copy-text {
+                        position: absolute;
+                        right: 0;
+                        top: 50px;
+                        width: 129px;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                    }
                 `}</style>
-            </SocialesInner>
         </ContainerSociales >
     )
 }
@@ -84,6 +110,7 @@ const ContainerSociales = styled.div`
   height: 50px;
   width: 100%;
   position: relative;
+  margin-bottom: 25px;
 `
 const SocialesInner = styled.div`
   height: 50px;

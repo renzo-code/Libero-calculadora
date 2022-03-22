@@ -6,9 +6,10 @@ import TableCalcPositions from '../Table-calc/table'
 import MesurerCalcLine from '../MesurerCalcLine'
 // import { ArrayPointsTable } from '../../const/index'
 import exportAsImage from '../../src/utils/exportAsImage'
+import TableScorers from '../TableScorers'
 
 const Calculator = () => {
-  
+
   const ArrayPointsTable = [
     {
       pais: 'Brasil',
@@ -50,7 +51,7 @@ const Calculator = () => {
       pais: 'Uruguay',
       logo: './static/images/100_uruguay.svg',
       PJ: 16,
-      PG: 6, 
+      PG: 6,
       PE: 4,
       PP: 6,
       DG: -3,
@@ -141,9 +142,47 @@ const Calculator = () => {
       </Bajada>
       {/* <MeasurerCalc table={table} setTable={setTable} /> */}
       <MesurerCalcLine originTable={ArrayPointsTable} table={table} setTable={setTable} />
-      <TableCalcPositions referencia={exportRef} table={table} />
-      <Bajada>Descarga tu predicción Eliminatorias Sudamérica Qatar 2022</Bajada>
-      <BtnDowload onClick={() => exportAsImage(exportRef.current, "Predicción")}>Descargar</BtnDowload>
+      <div className='main-container'>
+        <TableCalcPositions referencia={exportRef} table={table} />
+        <div className='descarga-goleadores-container'>
+          <div className='descarga-container'>
+            <Bajada>Descarga tu predicción Eliminatorias Sudamérica Qatar 2022</Bajada>
+            <BtnDowload onClick={() => exportAsImage(exportRef.current, "Predicción")}>Descargar</BtnDowload>
+          </div>
+          <div>
+            <TableScorers />
+          </div>
+        </div>
+      </div>
+      <style jsx={true}>{`
+        .main-container {
+          display: flex
+        }
+
+        .descarga-goleadores-container {
+          display: flex;
+          padding-bottom: 62px;
+          flex-flow: column-reverse;
+        }
+
+        .descarga-container {
+          margin-top: 30px;
+        }
+
+        @media (max-width: 1100px){
+          .main-container {
+            display: block
+          }
+          .descarga-goleadores-container {
+            flex-flow: column;
+            padding-bottom: 0;
+          }
+          .descarga-container {
+            margin-top: 0;
+          }
+        }
+        
+      `}</style>
     </Container>
   )
 }
@@ -171,6 +210,7 @@ const Bajada = styled.h2`
   width: 90%;
   margin: 0 auto;
   padding-bottom: 20px;
+  line-height: 25px;
 `
 const BtnDowload = styled.div`
   width: 120px;

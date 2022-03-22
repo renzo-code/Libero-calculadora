@@ -52,6 +52,7 @@ const Wrappertitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 5px 0;
 `
 const TitleFooter = styled.h2`
   font-size: 15px;
