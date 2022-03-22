@@ -19,7 +19,7 @@ const InputScore = ({ onchange, value, name, idJornadaSelect, idJornadaActual, t
   text-align: center;
 
   
-  border: ${idJornadaSelect >= idJornadaActual + 1 ? 'solid 1px #000;' : '0 !important;'}
+  border: ${idJornadaSelect >= idJornadaActual ? 'solid 1px #000;' : '0 !important;'}
   @media (max-width: 400px){
     margin: 0 5px;
   }
