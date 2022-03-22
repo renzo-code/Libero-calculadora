@@ -6,7 +6,7 @@ import ButtonCalc from '../Measurer-calc/ButtonCalc'
 
 const MesurerCalcLine = ({ table, setTable, originTable }) => {
 
-  const ID_FECHA_ACTUAL = 3
+  const ID_FECHA_ACTUAL = 4
   const [idFecha, setIdFecha] = useState(ID_FECHA_ACTUAL)
   const [ultimaFechaData, setUltimaFechaData] = useState(ID_FECHA_ACTUAL)
 
@@ -18,7 +18,7 @@ const MesurerCalcLine = ({ table, setTable, originTable }) => {
 
   const [errorCalculo, setErrorCalculo] = useState(false)
 
-  const FECHA_ACTUAL = fecha16
+  const FECHA_ACTUAL = fecha17
 
   const handleCambiarFecha = (num) => {
     setIdFecha(idFecha + num)
@@ -184,8 +184,8 @@ const MesurerCalcLine = ({ table, setTable, originTable }) => {
         >
           <svg enableBackground="new 0 0 32 32" id="1" version="1.1" viewBox="0 0 32 32" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXxlink="http://www.w3.org/1999/xlink"><path d="M22.285,15.349L16,21.544l-6.285-6.196c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   l6.999,6.899c0.379,0.375,1.048,0.377,1.429,0l6.999-6.9c0.394-0.39,0.394-1.024,0-1.414   C23.319,14.958,22.679,14.958,22.285,15.349z" fill="#121313" /><path d="M15.286,16.662c0.379,0.375,1.048,0.377,1.429,0l6.999-6.899c0.394-0.391,0.394-1.024,0-1.414   c-0.394-0.391-1.034-0.391-1.428,0L16,14.544L9.715,8.349c-0.394-0.391-1.034-0.391-1.428,0c-0.394,0.391-0.394,1.024,0,1.414   L15.286,16.662z" fill="#121313" /></svg>
         </button>
-        <ButtonCalc txt={'Limpiar'} disabled={idFecha > ID_FECHA_ACTUAL ? false : true} colorBtn={idFecha > ID_FECHA_ACTUAL ? 'green' : 'red'} onClick={() => { handleClean(fecha(idFecha), setFecha(idFecha)) }} />
-        <ButtonCalc txt={'Calcular'} disabled={idFecha > ultimaFechaData ? false : true} colorBtn={idFecha > ultimaFechaData ? 'green' : 'red'} onClick={() => { CalcPoints(fecha(idFecha)) }} />
+        <ButtonCalc txt={'Limpiar'} disabled={idFecha >= ID_FECHA_ACTUAL ? false : true} colorBtn={idFecha >= ID_FECHA_ACTUAL ? 'green' : 'red'} onClick={() => { handleClean(fecha(idFecha), setFecha(idFecha)) }} />
+        <ButtonCalc txt={'Calcular'} disabled={idFecha >= ultimaFechaData ? false : true} colorBtn={idFecha >= ultimaFechaData ? 'green' : 'red'} onClick={() => { CalcPoints(fecha(idFecha)) }} />
         <button className='mesureRightButton'
           onClick={() => handleCambiarFecha(1)}
           disabled={idFecha >= 5 ? true : false}
